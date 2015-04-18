@@ -1,0 +1,81 @@
+/* 	SET ALL ELEMENTS TO BOX-SIZING : BORDER-BOX */
+* { 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	*behavior: url(/scripts/boxsizing.htc); 
+}
+
+
+/*	MAIN CONTAINER 
+	Set the width to whatever you want the width of your site to be. */
+.container { 
+	max-width: @container-width;
+	margin: 0 auto; 
+}
+
+/*	SELF CLEARING FLOATS - CLEARFIX METHOD */
+.container:after,
+.row:after, 
+.col:after, 
+.clr:after, 
+.group:after { 
+	content: ""; 
+	display: table; 
+	clear: both; 
+}
+
+/* 	DEFAULT ROW STYLES 
+	Set bottom padding according to preference */
+.row { 
+	// padding-bottom: 0em;
+}
+							  
+/* DEFAULT COLUMN STYLES */
+.col { 
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+@media ( min-width : 768px ) {
+	
+	.gutters .col {
+		margin-left: 2%;
+	}
+	
+	.gutters .col:first-child { 
+		margin-left: 0; 
+	}
+}
+
+
+/*	COLUMN WIDTH ON DISPLAYS +768px 
+	You might need to play with media queries here to suite your design. */
+@media ( min-width : 768px ) {
+	.span_1 { width: @column-width; }
+	.span_2 { width: @column-width*2; }
+	.span_3 { width: @column-width*3; }
+	.span_4 { width: @column-width*4; }
+	.span_5 { width: @column-width*5; }
+	.span_6 { width: @column-width*6; }
+	.span_7 { width: @column-width*7; }
+	.span_8 { width: @column-width*8; }
+	.span_9 { width: @column-width*9; }
+	.span_10 { width: @column-width*10; }
+	.span_11 { width: @column-width*11; }
+	.span_12 { width: @column-width*12; }
+	
+	.gutters .span_1 { width: 6.5%; }
+	.gutters .span_2 { width: 15.0%; }
+	.gutters .span_3 { width: 23.5%; }
+	.gutters .span_4 { width: 32.0%; }
+	.gutters .span_5 { width: 40.5%; }
+	.gutters .span_6 { width: 49.0%; }
+	.gutters .span_7 { width: 57.5%; }
+	.gutters .span_8 { width: 66.0%; }
+	.gutters .span_9 { width: 74.5%; }
+	.gutters .span_10 { width: 83.0%; }
+	.gutters .span_11 { width: 91.5%; }
+	.gutters .span_12 { width: 100%; }
+}

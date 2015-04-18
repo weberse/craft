@@ -1,0 +1,3 @@
+[submodule "item-colors"]
+	path = item-colors
+	url = https://github.com/weberse/item-colors
