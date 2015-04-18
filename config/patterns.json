@@ -1,5 +1,14 @@
 {
 	"colors": {
+		"internet": {
+			"dark": "#303030",
+			"light": "#E6E2A2",
+			"brand": "#F0C000",
+			"primary": "#F0C000",
+			"success": "#F0C000",
+			"warning": "#d9534f",
+			"info": "#F0D800"
+		},
 		"buisness": {
 			"dark": "#3e3c42",
 			"light": "white",
@@ -18,6 +27,16 @@
 			"success": "#707070",
 			"warning": "#d9534f",
 			"info": "#ffd351"
+		},
+
+		"viking": {
+			"dark": "#6B8349",
+			"light": "#E6E2A2",
+			"brand": "#e76a04",
+			"primary": "#3b73af",
+			"success": "#FCA055",
+			"warning": "#d9534f",
+			"info": "#fed8b9"
 		}
 	}
 }
