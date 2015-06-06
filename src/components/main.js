@@ -1,6 +1,6 @@
 var React = require('react');
 var Header = require('./header');
-var Section = require('./section');
+var Section = require('./simple/section');
 var Aside = require('./aside');
 var Footer = require('./footer');
 
