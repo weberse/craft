@@ -1,4 +1,6 @@
 var React = require('react');
+var Router = require('react-router');
+var Link = Router.Link;
 
 var Header = React.createClass({
     render: function() {
@@ -8,7 +10,7 @@ var Header = React.createClass({
                     <div className="col span_3"><h2>Web page</h2></div>
                     <div className="col span_4">
                         <nav>
-                            <a href="#">Featers</a>
+                            <Link to="page1">Featers</Link>
                             <a href="#">Contact</a>
                             <a href="#">Docs</a>
                             <a href="#">Support</a>
