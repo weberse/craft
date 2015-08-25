@@ -11,21 +11,30 @@
     "flux": "^2.0.1",
     "keymirror": "~0.1.0",
     "object-assign": "^1.0.0",
-    "react": "^0.12.0",
+    "react": "*",
     "less": "2.5.0"
   },
   "devDependencies": {
+    "babel-core": "^5.4.7",
+    "babel-eslint": "^3.1.9",
+    "babel-loader": "^5.1.2",
+    "browserify": "*",
+    "envify": "^*",
+    "eslint-plugin-react": "^2.3.0",
     "gulp": "^3.8.7",
     "gulp-connect": "*",
-    "browserify": "^6.2.0",
-    "envify": "^3.0.0",
-    "jest-cli": "~0.1.17",
-    "reactify": "^0.15.2",
-    "uglify-js": "~2.4.15",
-    "watchify": "^2.1.1"
+    "jest-cli": "*",
+    "jsx-loader": "^0.13.2",
+    "react-hot-loader": "^1.2.7",
+    "reactify": "*",
+    "uglify-js": "*",
+    "watchify": "*",
+    "webpack": "^1.9.6",
+    "webpack-dev-server": "^1.8.2"
   },
   "scripts": {
-    "start": "watchify -o assets/script.js -v -d app/app.js",
+    "start": "node server.js",
+    "lint": "eslint src",
     "build": "browserify . -t [envify --NODE_ENV production] | uglifyjs -cm > assets/script.min.js",
     "test": "jest"
   },
