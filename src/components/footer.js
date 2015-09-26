@@ -3,8 +3,8 @@ var React = require('react');
 var Footer = React.createClass({
     render: function() {
         return (
-            <footer className="content">
-                <div className="pure-g">
+            <footer className="">
+                <div className="content pure-g">
                     <div className="pure-u-1-4">
                         <a href="#">Pricing</a>
                         <a href="#">Clients</a>
