@@ -3,15 +3,15 @@ var React = require('react');
 var Section = React.createClass({
     render: function() {
         return (
-            <section className="content pure-g">
+            <section className="content pure-g" style={this.props.style}>
                 <div className="pure-u-1">
-                    <h3>Development from the past until today</h3>
+                    <h3>{this.props.sliderContent.title}</h3>
                 </div>
-                <div className="pure-u-1-4">
-                    <a href="#" className="button info">Sign Up</a>
+                <div className="pure-u-1-6">
+                    <a href="#" className="button info">{this.props.sliderContent.buttons.primary}</a>
                 </div>
                 <div className="pure-u-1-3">
-                    <a href="#" className="button btn-bkg">Try Editor</a>
+                    <a href="#" className="button btn-bkg">{this.props.sliderContent.buttons.default}</a>
                 </div>
             </section>
         );
