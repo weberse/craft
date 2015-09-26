@@ -7,26 +7,18 @@ var Footer = require('./footer');
 var content =
 {
     "menu":{
-        "features":{
-            "title":"Features"
 
-        },
         "contact":{
             "title":"Contact"
 
         },
-        "support":{
-            "title":"Support"
+        "about":{
+            "title":"About"
 
         },
-        "login":{
-            "title":"Login",
-            "type":"login"
+        "features":{
+            "title":"Features"
 
-        },
-        "logout":{
-            "title":"Logout",
-            "type":"logout"
         }
     },
     "slides":{
@@ -55,19 +47,6 @@ var content =
     },
     "footer":{
         "sitemap":{
-            "title":"Pricing",
-            "title":"Clients",
-            "title":"Partners",
-            "title":"Press",
-            "title":"Docs",
-            "title":"About",
-            "title":"Careers",
-            "title":"Team",
-            "title":"FAQ",
-            "title":"FAQ",
-            "title":"Blog",
-            "title":"Status",
-            "title":"Security"
         },
         "copyright":{
             "title":"© Copyright 2058, Example Corporation"
@@ -78,14 +57,13 @@ var content =
 var headerStyle = {
     brand: {
         fontSize: "28px",
-        margin: "6px 0",
-        color: "white"
+        margin: "0px 0 20px 0px"
     },
     padding: "25px"
 };
 
 var sliderStyle = {
-    padding: "100px 0 100px 0"
+    padding: "100px 0 100px 17%"
 };
 
 var asideStyle = {
@@ -96,7 +74,11 @@ var asideStyle = {
 
 var footerStyle = {
     minHeight: "150px",
-	padding: "30px 0"
+	padding: "0 0 0 50px",
+    copyright:{
+        paddingTop: "50px",
+        textAlign: "center"
+    }
 };
 
 
