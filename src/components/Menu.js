@@ -8,7 +8,7 @@ export default class Menu extends Component {
             <div className="pure-menu pure-menu-horizontal">
                 <ul className="pure-menu-list">
                     {Object.keys(menu).map(function(object, i){
-                        return <MenuItem item={menu[object]} /> ;
+                        return <MenuItem item={menu[object]} link={object} /> ;
                     })}
                 </ul>
             </div>

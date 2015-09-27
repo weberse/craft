@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Router, Route, Link } from 'react-router'
 
 
 export default class MenuItem extends Component {
@@ -10,7 +10,9 @@ export default class MenuItem extends Component {
   		};
         return (
             <li className="" style={defaultStyle}>
-            	<a href="#">{this.props.item.title}</a>
+            	<Link to={this.props.link}>
+            		{this.props.item.title} 
+            	</Link>
             </li>
         );
     }
