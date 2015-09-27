@@ -3,8 +3,8 @@
 
 import React from 'react'
 import { Router, Route, Link } from 'react-router'
-// import Main from './components/main'
-import Main from './layouts/onepage'
+import Main from './components/main'
+// import Main from './layouts/onepage'
 import About from './components/about'
 
 React.render((
