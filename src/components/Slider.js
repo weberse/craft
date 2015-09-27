@@ -1,8 +1,7 @@
-var React = require('react');
+import React, { Component } from 'react';
 
-
-var Slider = React.createClass({
-	render: function(){
+export default class Slider extends Component {
+	render() {
 		return (
 			<div className="container">
 				<div>
@@ -15,8 +14,6 @@ var Slider = React.createClass({
 					<a href="#" className="button btn-bkg">{this.props.slides.main.buttons.default}</a>
 				</div>
 			</div>
-		)
+		);
 	}
-});
-
-module.exports = Slider;
+}

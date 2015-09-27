@@ -1,8 +1,10 @@
 var React = require('react');
-var Header = require('./header');
-var Section = require('./section');
-var Aside = require('./aside');
-var Footer = require('./footer');
+var Header = require('../components/header');
+var Features = require('../components/features');
+var Section = require('../components/section');
+var Aside = require('../components/aside');
+var Footer = require('../components/footer');
+var About = require('../components/about');
 
 var content =
 {
@@ -45,6 +47,11 @@ var content =
                 "link":"learn more →"
         }
     },
+    "features": {
+        icon1: "/assets/icons/svg/camping35.svg",
+        icon2: "/assets/icons/svg/cooking61.svg",
+        icon3: "/assets/icons/svg/baggage33.svg"
+    },
     "footer":{
         "sitemap":{
         },
@@ -83,12 +90,17 @@ var footerStyle = {
 };
 
 
+var featuresStyle = {
+    padding: "100px 0 100px 25px"
+};
+
+
 var Main = React.createClass({
     render: function() {
         return (
             <div>
-                <Header menuContent={content.menu} style={headerStyle} />
-                <Section sliderContent={content.slides.main} style={sliderStyle}/>
+                <About sliderContent={content.slides.main} style={sliderStyle}/>
+                <Features content={content.features} style={featuresStyle} />
                 <Aside style={asideStyle}/>
                 <Footer style={footerStyle} />
             </div>

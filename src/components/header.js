@@ -1,23 +1,19 @@
-var React = require('react');
+import React from 'react';
+import Menu from './Menu';
+import { Router, Route, Link } from 'react-router'
 
 var Header = React.createClass({
     render: function() {
         return (
-            <header className="row">
-                <div className="container">
-                    <div className="col span_3">
-                        <h2>Web page</h2></div>
-                    <div className="col span_4">
-                        <nav>
-                            <a href="#">Featers</a>
-                            <a href="#">Contact</a>
-                            <a href="#">Docs</a>
-                            <a href="#">Support</a>
-                        </nav>
+            <header style={this.props.style}>
+                <div className="content pure-g">
+                    <div className="pure-u-1 pure-u-md-1-3">
+                        <Link to=''><div className="pure-menu" style={this.props.style.brand}>
+                            Web page
+                        </div></Link>
                     </div>
-                    <div class="right">
-                        <a href="#" className="button">Login</a>
-                        <a href="#" className="button btn-border">Sign Up</a>
+                    <div className="pure-u-1 pure-u-md-2-3">
+                        <Menu menu={this.props.menuContent}/>
                     </div>
                 </div>
             </header>
