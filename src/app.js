@@ -7,11 +7,4 @@ import Main from './components/main'
 // import Main from './layouts/onepage'
 import About from './components/about'
 
-React.render((
-	<Router>
-		<Route path="/" component={Main} />
-	    <Route path="about" component={About}/>
-	    <Route path="features" component={Main}/>
-	    <Route path="contact" component={Main}/>
-	</Router>
-),document.getElementById('app'));
+React.render(<Main/>, document.getElementById('app'));
