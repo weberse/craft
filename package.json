@@ -12,6 +12,7 @@
     "keymirror": "~0.1.0",
     "less": "2.5.0",
     "object-assign": "^1.0.0",
+    "radium": "^0.16.2",
     "react": "*",
     "react-inlinesvg": "^0.4.2",
     "react-router": "^1.0.0-rc1"

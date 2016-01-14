@@ -1,4 +1,5 @@
 var React = require('react');
+var Styles = require('styles/index');
 
 var Footer = React.createClass({
     render: function() {

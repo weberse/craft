@@ -23,5 +23,8 @@ module.exports = {
             loaders: ['react-hot', 'babel'],
             include: [path.join(__dirname, 'src'), path.join(__dirname, 'app')]
         }]
+    },
+    resolve: {
+        root: path.join(__dirname, "src")
     }
 };
