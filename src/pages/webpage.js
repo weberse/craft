@@ -10,7 +10,7 @@ export default class App extends Component {
         return (
            	<Router>
 				<Route path="/" component={Main} />
-				<Route path="/about" component={About}/>
+				<Route path="/about" component={Main}/>
 				<Route path="/features" component={Main}/>
 				<Route path="/contact" component={Main}/>
 			</Router>
