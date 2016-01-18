@@ -7,18 +7,20 @@ var Footer = React.createClass({
             <footer style={this.props.style} >
                 <div className="content pure-g">
                     <div className="pure-u-1-1 pure-u-md-1-5">
+                        <div>Info</div>
                         <div href="#"><a href="#">Pricing</a></div>
                         <div href="#"><a href="#">Clients</a></div>
                         <div href="#"><a href="#">Partners</a></div>
-                        <div href="#"><a href="#">Press</a></div>
                     </div>
                     <div className="pure-u-1-1 pure-u-md-1-5">
+                        <div>About us</div>
                         <div><a href="#">Docs</a></div>
                         <div><a href="#">About</a></div>
                         <div><a href="#">Careers</a></div>
                         <div><a href="#">Team</a></div>
                     </div>
                     <div className="pure-u-1-1 pure-u-md-1-5">
+                        <div>Help</div>
                         <div><a href="#">FAQ</a></div>
                         <div><a href="#">Blog</a></div>
                         <div><a href="#">Status</a></div>
