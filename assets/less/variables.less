@@ -1,0 +1,55 @@
+@container-width: 1100px;
+@colums: 12;
+@nice-blue: #5B83AA;
+
+@font: "bt_mono", "Source Code Pro", courier, monospace;
+@font: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+
+
+// COLORS
+
+@dark: #303030;
+@dark1: #181818;
+@dark2: #181818;
+@light: #E6E2A2;
+@light1: #fff;
+@light2: #F5FAF8;
+@brand: #F0C000;
+@primary: #222;
+@success: #F0C000;
+@warning: #f9276f;
+@info: #F0D800;
+
+
+
+// AUTO
+
+@column-width: 100/12%;
+
+
+// SIZING
+
+@size-base:          14px;
+@size-large:         ceil((@size-base * 1.25)); // ~18px
+@size-small:         ceil((@size-base * 0.85)); // ~12px
+
+@size-h1:            floor((@size-base * 2.6)); // ~36px
+@size-h2:            floor((@size-base * 2.15)); // ~30px
+@size-h3:            ceil((@size-base * 1.7)); // ~24px
+@size-h4:            ceil((@size-base * 1.25)); // ~18px
+@size-h5:            @size-base;
+@size-h6:            ceil((@size-base * 0.85)); // ~12px
+
+// PADDING 
+
+@padding-vbase:     6px;
+@padding-hbase:   	12px;
+
+
+@headings-line-height:    1.1;
+
+
+//** Unit-less `line-height` for use in components like buttons.
+@line-height-base:        1.428571429; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+@line-height-computed:    floor((@size-base * @line-height-base)); // ~20px
