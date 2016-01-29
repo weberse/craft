@@ -4,56 +4,8 @@ var Section = require('./section');
 var Aside = require('./aside');
 var Footer = require('./footer');
 var Radium = require('radium');
+var Content = require('content/index');
 
-var content =
-{
-    "menu":{
-
-        "contact":{
-            "title":"Contact"
-
-        },
-        "about":{
-            "title":"About"
-
-        },
-        "features":{
-            "title":"Features"
-
-        }
-    },
-    "slides":{
-        "main":{
-            "title":"Development from the past until today",
-                "buttons":{
-                    "primary":"Try Editor",
-                    "default":"Sign up"
-            }
-        },
-        "sub1":{
-            "title":"It's free",
-                "content":"Fast web prototyping. Every day it's growing.",
-                "link":"learn more →"
-        },
-        "sub2":{
-            "title":"One Touch",
-                "content":"Fast web prototyping. Every day it's growing.",
-                "link":"learn more →"
-        },
-        "sub3":{
-            "title":"Minimalism",
-                "content":"Download source files after editing, it's simple to understand and rebuild for your needs",
-                "link":"learn more →"
-        }
-    },
-    "footer":{
-        "sitemap":{
-        },
-        "copyright":{
-            "title":"© Copyright 2058, Example Corporation"
-        }
-    }
-};
 
 //@dark: #303030;
 //@dark1: #181818;
@@ -71,10 +23,6 @@ var dark = '#303030';
 var dark1 = '#181818';
 var dark2 = '#181818';
 var light = '#E6E2A2';
-
-var mainStyle = {
-
-}
 
 var headerStyle = {
     brand: {
@@ -105,18 +53,21 @@ var footerStyle = {
     minHeight: "150px",
 	padding: "20px 0 0 50px",
     copyright:{
-        paddingTop: "50px",
-        textAlign: "center"
+        padding: "50px 0 15px 0",
+        textAlign: "center",
+        text: {
+            color: "white"
+        }
     },
-    "background-color": light
+    "background-color": dark2
 };
 
 class Main extends React.Component {
     render() {
         return (
             <div>
-                <Header menuContent={content.menu} style={headerStyle} />
-                <Section sliderContent={content.slides.main} style={sliderStyle}/>
+                <Header menuContent={Content.menu} style={headerStyle} />
+                <Section sliderContent={Content.slides.main} style={sliderStyle}/>
                 <Aside style={asideStyle}/>
                 <Footer style={footerStyle} />
             </div>

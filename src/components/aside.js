@@ -1,5 +1,25 @@
 var React = require('react');
 
+var styles = {
+    base: {
+        color: '#fff',
+
+        // Adding interactive state couldn't be easier! Add a special key to your
+        // style object (:hover, :focus, :active, or @media) with the additional rules.
+        ':hover': {
+            //background: color('#0074d9').lighten(0.2).hexString()
+        }
+    },
+
+    primary: {
+        background: '#0074D9'
+    },
+
+    warning: {
+        background: '#FF4136'
+    }
+};
+
 var Aside = React.createClass({
     render: function() {
         return (

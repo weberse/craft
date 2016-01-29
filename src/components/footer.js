@@ -28,7 +28,9 @@ var Footer = React.createClass({
                     </div>
                 </div>
                 <div style={this.props.style.copyright}>
-                    <small className="center">© Copyright 2058, Example Corporation</small>
+                    <small style={this.props.style.copyright.text} className="center">
+                        © Copyright 2016, Example Corporation
+                    </small>
                 </div>
             </footer>
         );

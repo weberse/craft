@@ -2,3 +2,8 @@ a:visited {
     text-decoration: none;
     color: inherit
 }
+
+footer a,
+footer div{
+    color: white;
+}
