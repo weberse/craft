@@ -1,6 +1,5 @@
 var Content = {
     "menu":{
-
         "contact":{
             "title":"Contact"
 
@@ -39,12 +38,82 @@ var Content = {
         }
     },
     "footer":{
-        "sitemap":{
+        "sitemap": {
+            "groups": [
+                {
+                    "title": "Info",
+                    links: [
+                        {
+                            "title": "Projects",
+                            "rout": "projects"
+                        },
+                        {
+                            "title": "Clients",
+                            "rout": "clients"
+                        },
+                        {
+                            "title": "Partners",
+                            "rout": "partners"
+                        },
+                        {
+                            "title": "Social",
+                            "rout": "social"
+                        }
+                    ]
+                },
+                {
+                    "title": "About",
+                    links: [
+                        {
+                            "title": "Press",
+                            "rout": "press"
+                        },
+                        {
+                            "title": "Docs",
+                            "rout": "docs"
+                        },
+                        {
+                            "title": "Blog",
+                            "rout": "blog"
+                        },
+                        {
+                            "title": "Team",
+                            "rout": "about"
+                        }
+                    ]
+                },
+                {
+                    "title": "Help",
+                    links: [
+                        {
+                            "title": "FAQ",
+                            "rout": "faq"
+                        },
+                        {
+                            "title": "Status",
+                            "rout": "status"
+                        }
+                    ]
+                }
+            ]
+
         },
         "copyright":{
-            "title":"© Copyright 2058, Example Corporation"
+            "title":"©"
         }
     }
 };
 
+var ContentModule = function() {
+
+    function footer() {
+        return Content.footer;
+    }
+
+    return {
+        footer: footer
+    };
+}();
+
 module.exports = Content;
+
