@@ -7,7 +7,7 @@ var List = React.createClass({
        return (
            <div>
                {this.props.links.map(function(result) {
-                   return  <div key={result.title}><a href="#">{result.title}</a></div>;
+                   return  <div style={Styles.footer.link} key={result.title}><a href="#">{result.title}</a></div>;
                })}
            </div>
 
@@ -18,17 +18,17 @@ var List = React.createClass({
 var Footer = React.createClass({
     render: function() {
         return (
-            <footer style={this.props.style} >
+            <footer style={Styles.footer} >
                 <div className="content pure-g">
                     {Content.footer.sitemap.groups.map(function(result) {
-                        return  <div className="pure-u-1-1 pure-u-md-1-5">
+                        return  <div style={Styles.footer.block} className="pure-u-1-1 pure-u-md-1-5">
                                     <div>{result.title}</div>
                                     <List links={result.links} />
                                 </div>;
                     })}
                 </div>
-                <div style={this.props.style.copyright}>
-                    <small style={this.props.style.copyright.text} className="center">
+                <div style={Styles.footer.copyright}>
+                    <small style={Styles.footer.copyright.text} className="center">
                         {Content.footer.copyright.title}
                     </small>
                 </div>
