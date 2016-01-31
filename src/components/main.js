@@ -5,6 +5,7 @@ var Aside = require('./aside');
 var Footer = require('./footer');
 var Radium = require('radium');
 var Content = require('content/index');
+var Editor = require('./editor');
 
 
 //@dark: #303030;
@@ -32,6 +33,7 @@ class Main extends React.Component {
                 <Section sliderContent={Content.slides.main} />
                 <Aside />
                 <Footer />
+                <Editor />
             </div>
         );
     }

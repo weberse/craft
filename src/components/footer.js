@@ -10,7 +10,6 @@ var List = React.createClass({
                    return  <div style={Styles.footer.link} key={result.title}><a href="#">{result.title}</a></div>;
                })}
            </div>
-
        );
    }
 });
