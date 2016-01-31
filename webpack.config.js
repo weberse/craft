@@ -9,13 +9,18 @@ module.exports = {
         './app/app'
     ],
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: path.join(__dirname, '/static/'),
         filename: 'bundle.js',
         publicPath: '/static/'
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin()
+        //new webpack.DefinePlugin({
+        //     'process.env': {
+        //       'NODE_ENV': JSON.stringify('production')
+        //     }
+        //   })
     ],
     module: {
         loaders: [{
@@ -23,5 +28,8 @@ module.exports = {
             loaders: ['react-hot', 'babel'],
             include: [path.join(__dirname, 'src'), path.join(__dirname, 'app')]
         }]
+    },
+    resolve: {
+        root: path.join(__dirname, "src")
     }
 };
