@@ -9,13 +9,18 @@ module.exports = {
         './app/app'
     ],
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: path.join(__dirname, '/static/'),
         filename: 'bundle.js',
         publicPath: '/static/'
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin()
+        //new webpack.DefinePlugin({
+        //     'process.env': {
+        //       'NODE_ENV': JSON.stringify('production')
+        //     }
+        //   })
     ],
     module: {
         loaders: [{

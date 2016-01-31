@@ -99,7 +99,7 @@ var Content = {
 
         },
         "copyright":{
-            "title":"©"
+            "title":"© 2016"
         }
     }
 };
