@@ -1,4 +1,4 @@
-var React = require('react');
+import React, { Component, PropTypes } from 'react'
 var Header = require('./header');
 var Section = require('./section');
 var Aside = require('./aside');
@@ -25,7 +25,7 @@ var dark1 = '#181818';
 var dark2 = '#181818';
 var light = '#E6E2A2';
 
-class Main extends React.Component {
+class Main extends Component {
     render() {
         return (
             <div>
@@ -33,10 +33,18 @@ class Main extends React.Component {
                 <Section sliderContent={Content.slides.main} />
                 <Aside />
                 <Footer />
-                <Editor />
+                <Editor props={this.props} />
             </div>
         );
     }
+}
+
+Main.propTypes = {
+    increment: PropTypes.func.isRequired,
+    incrementIfOdd: PropTypes.func.isRequired,
+    incrementAsync: PropTypes.func.isRequired,
+    decrement: PropTypes.func.isRequired,
+    counter: PropTypes.number.isRequired
 }
 
 module.exports = Main;

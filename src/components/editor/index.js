@@ -51,9 +51,20 @@ var editorStyles = {
 };
 
 var Editor = React.createClass({
+
     render: function() {
+
+
+        const { increment, incrementIfOdd, incrementAsync, decrement, counter } = this.props
         return (
             <div style={editorStyles.box} >
+                <p>
+                    Clicked: {counter} times
+                    {' '}
+                    <button onClick={increment}>+</button>
+                    {' '}
+                    <button onClick={decrement}>-</button>
+                </p>
                 <div style={editorStyles.close}>
                     <a
                         onMouseDown={this.handleMouseDown}
