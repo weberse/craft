@@ -10,7 +10,7 @@ export default class MenuItem extends Component {
   		};
         return (
             <li className="" style={defaultStyle}>
-            	<Link to={this.props.link} style={Styles.header.a}>
+            	<Link to={this.props.link} style={this.props.Styles.header.a}>
             		{this.props.item.title} 
             	</Link>
             </li>

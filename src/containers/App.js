@@ -1,17 +1,19 @@
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import * as EditorActions from '../actions'
+import React, { Component } from 'react'
 
-import Main from '../components/main'
+import Page from './Page'
+import Editor from './Editor'
 
-function mapStateToProps(state) {
-    return {
-        counter: state.editor
+
+
+export default class App extends Component {
+    render() {
+        return (
+            <div>
+                <Page />
+                <Editor />
+            </div>
+        )
     }
 }
-
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators(EditorActions, dispatch)
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Main)

@@ -1,10 +1,9 @@
 var React = require('react');
-var Styles = require('styles/index');
 
 var Section = React.createClass({
     render: function() {
         return (
-            <section className="content pure-g" style={Styles.slider}>
+            <section className="content pure-g" style={this.props.Styles.slider}>
                 <div className="pure-u-1">
                     <h3>{this.props.sliderContent.title}</h3>
                 </div>

@@ -1,9 +1,9 @@
 var React = require('react');
-var Styles = require('styles/index');
 var Content = require('content/index');
 
 var List = React.createClass({
    render: function(){
+       var Styles = this.props.Styles
        return (
            <div>
                {this.props.links.map(function(result) {
@@ -16,13 +16,14 @@ var List = React.createClass({
 
 var Footer = React.createClass({
     render: function() {
+        var Styles = this.props.Styles
         return (
             <footer style={Styles.footer} >
                 <div className="content pure-g">
                     {Content.footer.sitemap.groups.map(function(result) {
                         return  <div style={Styles.footer.block} className="pure-u-1-1 pure-u-md-1-5">
                                     <div>{result.title}</div>
-                                    <List links={result.links} />
+                                    <List Styles={Styles} links={result.links} />
                                 </div>;
                     })}
                 </div>
