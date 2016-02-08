@@ -1,5 +1,4 @@
 var React = require('react');
-var Content = require('content/index');
 
 var List = React.createClass({
    render: function(){
@@ -16,6 +15,7 @@ var List = React.createClass({
 
 var Footer = React.createClass({
     render: function() {
+        var Content = this.props.Content
         var Styles = this.props.Styles
         return (
             <footer style={Styles.footer} >

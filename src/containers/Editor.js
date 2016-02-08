@@ -9,7 +9,22 @@ var Colors = React.createClass({
         return (
             <select onChange={this.handleChange} >
                 {Object.keys(this.props.patterns).map(function(object, i){
-                    return <option value={object}>{object}</option>;
+                    return <option key={i} value={object}>{object}</option>;
+                })}
+            </select>
+        );
+    },
+    handleChange: function(event) {
+        this.props.changeColor(event.target.value)
+    }
+});
+
+var Content = React.createClass({
+    render: function() {
+        return (
+            <select onChange={this.handleChange} >
+                {(this.props.patterns).map(function(object){
+                    return <option key={object} value={object}>{object}</option>;
                 })}
             </select>
         );
@@ -38,13 +53,19 @@ var Editor = React.createClass({
 
     render: function() {
 
-        const { changeColor, colors } = this.props
+        const { changeColor, changeContent, colors, contentTypes } = this.props
         return (
             <div style={editorStyles.box} >
                 <div>
                     <Colors
                         patterns={colors.colors}
                         changeColor={changeColor}
+                        />
+                </div>
+                <div>
+                    <Content
+                        patterns={contentTypes}
+                        changeColor={changeContent}
                         />
                 </div>
             </div>
@@ -55,7 +76,8 @@ var Editor = React.createClass({
 
 function mapStateToProps(state) {
     return {
-        colors: state.editor.patterns
+        colors: state.editor.patterns,
+        contentTypes: state.editor.contentTypes
     }
 }
 

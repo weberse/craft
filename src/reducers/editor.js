@@ -1,9 +1,9 @@
-import { CHANGE_COLOR, SET_COLORS } from '../actions'
+import { CHANGE_COLOR, CHANGE_CONTENT, SET_COLORS } from '../actions'
 import Styles from 'styles/index'
 
 var patterns = {
     "colors": {
-        "buisness": {
+        "business": {
             "dark": "#3e3c42",
             "dark2": "#3e3c42",
             "light": "white",
@@ -26,10 +26,15 @@ var patterns = {
     }
 };
 
+var contentTypes = ['page', 'pool'];
+
+
 const initialState = {
-    colorPattern: "web",
+    colorPattern: "business",
+    contentType: 'page',
     patterns: patterns,
-    Styles: Styles(patterns.colors.web)
+    contentTypes: contentTypes,
+    Styles: Styles(patterns.colors.business)
 };
 
 export default function editor(state = initialState, action = '') {
@@ -38,8 +43,12 @@ export default function editor(state = initialState, action = '') {
             return action.payload
         case CHANGE_COLOR:
             return Object.assign({}, state, {
-                colorPattern: action.color,
+                colorPattern: action.value,
                 Styles: Styles(patterns.colors[action.value])
+            });
+        case CHANGE_CONTENT:
+            return Object.assign({}, state, {
+                contentType: action.value
             });
         default:
             return initialState;
